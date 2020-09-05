@@ -5,7 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\AMA.Common\AMA.Common\AMA.Common.csproj" />
+    <None Remove="nuget.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="nuget.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -13,6 +21,10 @@
     <Folder Include="Application\Queries\" />
     <Folder Include="Domain\Constants\" />
     <Folder Include="Domain\Enums\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AMA.Common" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

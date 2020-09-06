@@ -1,30 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="nuget.config" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="nuget.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Application\Commands\" />
     <Folder Include="Application\Queries\" />
-    <Folder Include="Domain\Constants\" />
     <Folder Include="Domain\Enums\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AMA.Common" Version="1.0.0" />
+    <ProjectReference Include="..\..\AMA.Common\AMA.Common\AMA.Common.csproj" />
+    <ProjectReference Include="..\..\AMA.Persistence\AMA.Persistence\AMA.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

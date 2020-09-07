@@ -1,7 +1,7 @@
-﻿using FluentValidation;
-
-namespace AMA.Users.Application.Queries.GetUser
+﻿namespace AMA.Users.Application.Queries.GetUser
 {
+    using FluentValidation;
+
     public class GetUserValidation : AbstractValidator<GetUserQuery>
     {
         public GetUserValidation()

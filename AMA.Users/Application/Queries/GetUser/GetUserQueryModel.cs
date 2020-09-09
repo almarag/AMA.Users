@@ -1,4 +1,7 @@
-﻿namespace AMA.Users.Application.Queries.GetUser
+﻿using AMA.Users.Domain.Models;
+using System.Collections.Generic;
+
+namespace AMA.Users.Application.Queries.GetUser
 {
     public class GetUserQueryModel
     {
@@ -8,5 +11,6 @@
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
         public string Status { get; set; }
+        public ICollection<GroupListViewModel> Groups { get; set; }
     }
 }

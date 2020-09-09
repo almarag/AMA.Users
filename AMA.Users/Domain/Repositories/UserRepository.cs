@@ -1,12 +1,12 @@
 ﻿namespace AMA.Users.Domain.Repositories
 {
-    using AMA.Common.Repositories;
     using AMA.Persistence.Contexts;
     using AMA.Persistence.Models;
     using System.Collections.Generic;
     using System.Threading.Tasks;
     using System.Linq;
     using Microsoft.EntityFrameworkCore;
+    using AMA.Persistence.Repositories;
 
     public class UserRepository : Repository<UserModel>
     {
@@ -23,6 +23,8 @@
         {
             return await _context.Users
                 .Include(x => x.PersonModel)
+                .Include(x => x.UserGroups)
+                .ThenInclude(x => x.GroupModel)
                 .Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
         }

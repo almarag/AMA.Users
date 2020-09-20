@@ -1,7 +1,7 @@
 ﻿namespace AMA.Users.Domain.Mappers
 {
     using AMA.Persistence.Models;
-    using AMA.Users.Application.Queries.GetUser;
+    using AMA.Users.Application.Users.Queries.GetUser;
     using AMA.Users.Domain.Models;
     using AutoMapper;
 

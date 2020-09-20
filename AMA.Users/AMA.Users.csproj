@@ -5,9 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Application\Commands\" />
-    <Folder Include="Application\Queries\" />
-    <Folder Include="Domain\Enums\" />
+    <Compile Remove="Application\Commands\**" />
+    <Compile Remove="Domain\Enums\**" />
+    <EmbeddedResource Remove="Application\Commands\**" />
+    <EmbeddedResource Remove="Domain\Enums\**" />
+    <None Remove="Application\Commands\**" />
+    <None Remove="Domain\Enums\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Application\Groups\" />
+    <Folder Include="Application\Permissions\" />
+    <Folder Include="Application\Users\Queries\" />
   </ItemGroup>
 
   <ItemGroup>

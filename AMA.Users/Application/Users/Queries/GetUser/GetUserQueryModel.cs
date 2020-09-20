@@ -1,8 +1,8 @@
-﻿using AMA.Users.Domain.Models;
-using System.Collections.Generic;
-
-namespace AMA.Users.Application.Queries.GetUser
+﻿namespace AMA.Users.Application.Users.Queries.GetUser
 {
+    using AMA.Users.Domain.Models;
+    using System.Collections.Generic;
+
     public class GetUserQueryModel
     {
         public int UserId { get; set; }

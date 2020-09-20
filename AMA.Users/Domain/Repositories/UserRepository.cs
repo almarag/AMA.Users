@@ -7,8 +7,9 @@
     using System.Linq;
     using Microsoft.EntityFrameworkCore;
     using AMA.Persistence.Repositories;
+    using AMA.Users.Domain.Interfaces;
 
-    public class UserRepository : Repository<UserModel>
+    public class UserRepository : Repository<UserModel>, IUserRepository
     {
         public UserRepository(ApplicationDbContext context) : base(context) { }
 

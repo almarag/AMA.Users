@@ -1,4 +1,4 @@
-﻿namespace AMA.Users.Application.Queries.GetUser
+﻿namespace AMA.Users.Application.Users.Queries.GetUser
 {
     using MediatR;
 

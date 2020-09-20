@@ -1,7 +1,8 @@
-﻿namespace AMA.Users.Application.Queries.GetUser
+﻿namespace AMA.Users.Application.Users.Queries.GetUser
 {
     using AMA.Common.Interfaces;
     using AMA.Persistence.Models;
+    using AMA.Users.Domain.Interfaces;
     using AMA.Users.Domain.Repositories;
     using AutoMapper;
     using MediatR;
@@ -11,15 +12,15 @@
     public class GetUserQueryHandler : IRequestHandler<GetUserQuery, GetUserQueryModel>
     {
         private readonly IMapper _mapper;
-        private readonly UserRepository _userRepository;
+        private readonly IUserRepository _userRepository;
         
         public GetUserQueryHandler(
             IMapper mapper,
-            IRepository<UserModel> userRepository
+            IUserRepository userRepository
         )
         {
             _mapper = mapper;
-            _userRepository = (UserRepository)userRepository;
+            _userRepository = userRepository;
         }
 
 
